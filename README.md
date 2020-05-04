@@ -28,11 +28,17 @@ Both the functions mentioned above accepts below inputs:
 5. y: The column name of the Dependent Variable (DV), for interactive model building. 
 
 Execution Overview: 
+
 These functions while called will launch a RShiny app. Input parameters such as the number of bins or the probability threshold can be adjusted through app widgets. 
+
 For interactive Model building, a model function, data set and the dependent variable name should be passed as arguments. Interactive model building option creates additional input widgets in the app. This includes: 
+
 1. A drop down to select independent variables. The names of the variables will be picked up from the data argument. Kindly exclude dependent variable name while choosing the predictor names. 
+
 2. An input slider to include additional models. Currently up to 10 additional models can be created. Each additional model updates the original model created. For e.g. consider the dataset has 10 predictors: x1-x10. Original model was created by selecting x1-x4 from the drop-down list. If we need to create a second model, by including x5 and excluding x3 simply type, “+ x5 - x3" in the input text box. 
+
 When multiple already built models needs to be compared then a list of one or more data frames each having two columns; actual class labels (0 or 1) and raw predicted probabilities (in the range of 0 to 1) from each model needs to be passed as an argument along with actual data set and the dependent variable name. 
+
 The 'Run-Analysis' button in the app, will generate model performance output basis selected input parameters.
 
 Compatibility:
